@@ -21,7 +21,7 @@ public class Main extends JavaPlugin {
 
 	@Override
 	public void onDisable() {
-		saveConfig();
+		
 	}
 
 	public static Main getInstance() {

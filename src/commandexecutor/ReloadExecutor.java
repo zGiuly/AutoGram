@@ -16,7 +16,7 @@ public class ReloadExecutor implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
 		if (sender instanceof Player) {
 			Player p = (Player) sender;
-			if (p.isOp()) {
+			if (p.isOp() || p.hasPermission("autogram.reload")) {
 				Main.getInstance().reloadConfig();
 				Bukkit.getPluginManager().disablePlugin(Main.getInstance());
 				Bukkit.getPluginManager().enablePlugin(Main.getInstance());
